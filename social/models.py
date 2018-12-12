@@ -5,10 +5,9 @@ from lib.orm import ModelMixin
 
 class Swiped(models.Model, ModelMixin):
     mark_type = (
-        ('喜欢', '喜欢'),
-        ('超级喜欢', '超级喜欢'),
-        ('不喜欢', '不喜欢'),
-        ('反悔', '反悔'),
+        ('superlike', '上滑'),
+        ('like', '右滑'),
+        ('dislike', '左滑'),
     )
     uid = models.IntegerField(verbose_name='用户自身id')
     sid = models.IntegerField(verbose_name='被滑的陌生人id')
